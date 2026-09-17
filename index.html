@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Digital - Media Ajar Interaktif HTML5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Application Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>Sistem Digital • Media Ajar Interaktif</h1>
+          <p>Mata Kuliah: Sistem Digital (3 SKS) | Institut Teknologi Sumatera (ITERA)</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+        <span class="course-badge">
+          <span>⚡</span> Semester Penuh (Minggu 1 - 14)
+        </span>
+        <button class="preset-pill" style="background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); border-color: var(--accent-cyan);" onclick="App.switchWeek(1, 'central-hub')">
+          Poros Biner Sentral
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Week Navigation Bar (Weeks 1 to 14) -->
+    <section class="week-nav-bar">
+      <div class="week-nav-header">
+        <div class="week-nav-title">
+          <span>📅</span> Navigasi Modul Perkuliahan (Minggu 1 s.d. 14)
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-dim);">
+          Klik minggu perkuliahan di bawah untuk membuka materi & simulator
+        </div>
+      </div>
+      <div class="week-scroll-container" id="week-nav-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Submenu Navigation Bar for Active Week -->
+    <nav class="submenu-bar" id="submenu-container">
+      <!-- Injected via JavaScript -->
+    </nav>
+
+    <!-- Main Content Display Container -->
+    <section id="main-content-container">
+      <!-- Injected via JavaScript -->
+    </section>
+
+    <!-- Footer with Academic References -->
+    <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--text-dim);">
+      <div>
+        <strong>Referensi Buku Ajar:</strong><br>
+        1. Frank Vahid & Tony Givargis – <em>Embedded System Design: A Unified Hardware/Software Introduction</em> (Wiley)<br>
+        2. Raj Kamal – <em>Embedded Systems: Architecture, Programming and Design</em> (McGraw-Hill)<br>
+        3. Peter Barry & Patrick Crowley – <em>Modern Embedded Computing</em> (Morgan Kaufmann)
+      </div>
+      <div style="text-align: right;">
+        Media Pembelajaran Interaktif HTML5 MK Sistem Digital<br>
+        Dibuat untuk kebutuhan perkuliahan interaktif & praktikum digital
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Load Scripts -->
+  <script src="js/curriculum-data.js"></script>
+  <script src="js/binary-hub.js"></script>
+  <script src="js/bit-switch.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/week2-c2.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+    });
+  </script>
+</body>
+</html>
